@@ -8,4 +8,4 @@ def test_getproduct(case_name, params, expected_code):
     mytoken = get_token()
     headers = {'Authorization':'Bearer '+mytoken,'Content-Type':'application/json; charset=utf-8'}
     response = requests.get("https://a.huihangedu.cn/api2/TZsbAdminProductApi/Course/GetListBack", params=params,headers=headers)
-    assert response.status_code == expected_code, f"通过：{case_name}"
+    assert response.status_code == expected_code, f"通过了：{case_name}"
